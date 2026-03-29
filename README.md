@@ -7,7 +7,7 @@ Este repositório contém uma implementação em Python para manipulação de gr
 O projeto está dividido em módulos principais:
 - **Busca em Profundidade (DFS):** Utilizada na classe `CC` para encontrar e contar as **Componentes Conexas** do grafo.
 - **Busca em Largura (BFS):** Utilizada na classe `BreadthFirstPaths` para encontrar o **menor caminho** (distância mínima) entre dois vértices.
-- **Estruturas de Suporte:** Implementações de `Graph`, `Bag`, `Stack` e `Queue` para suporte aos algoritmos.
+- **Estruturas de Suporte:** Implementações de `Graph`, `Bag` e `LinkedList` para suporte aos algoritmos.
 
 ## 🧩 Problema do Cavalo
 O algoritmo utiliza a **BFS** para determinar quantos movimentos um cavalo de xadrez precisa para ir da posição `(0,0)` até `(2,2)`. 
