@@ -31,8 +31,8 @@ O algoritmo utiliza a **BFS** para determinar quantos movimentos um cavalo de xa
 1. Certifique-se de ter o Python 3.x instalado.
    
 2. Clone o repositório
-   ```
-   git clone [https://github.com/SEU_USUARIO/t2-cavalo.git](https://github.com/SEU_USUARIO/t2-cavalo.git)
+   ```text
+   git clone https://github.com/pkcastrovasc/t2-cavalo.git
    ```
    
 3. Execute o script principal:
