@@ -76,12 +76,10 @@ print()
 # Questao 5
 ciclo = find_cycle_vertices(Grafo)
 if ciclo:
-    # Rotacionar ciclo para começar no vértice 0
     if 0 in ciclo:
         idx = ciclo.index(0)
-        ciclo_rotacionado = ciclo[idx:-1] + ciclo[:idx] + [0]
-        ciclo_invertido = ciclo_rotacionado[::-1]
-        print("Ciclo a partir de 0:", ciclo_invertido)
+        ciclo_final = (ciclo[idx:-1] + ciclo[:idx] + [0])[::-1]
+        print("Ciclo a partir de 0:", ciclo_final)
     else:
         print("Ciclo existe, mas não passa por 0:", ciclo)
 else:
