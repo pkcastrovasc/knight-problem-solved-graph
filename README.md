@@ -47,3 +47,5 @@ O algoritmo utiliza a **BFS** para determinar quantos movimentos um cavalo de xa
 - Complexidade de Algoritmos: Uso de BFS para garantir a otimização $O(V + E)$ na busca do caminho mínimo.
 
 Desenvolvido por **Pedro Castro e Eduardo Suaki** como parte da disciplina de Teoria dos Grafos.
+
+Link do vídeo para um melhor entendimento do código: https://youtu.be/Rh-SQdN1H30
