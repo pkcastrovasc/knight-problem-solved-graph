@@ -43,34 +43,41 @@ with open("dados/entrada.txt") as f:
         v, w = f.readline().split()
         Grafo.add_edge(v, w)
 
+def vertice_conectado(g, vertice):
+    cc = CC(g)
+    conectados = []
+    for i in range(g.V):
+        if cc.connected(vertice, i):
+            conectados.append(i)
+    return conectados
+
 # Questao 1
 print(Grafo)
 
 print()
 # Questao 2
-vertice = 0
 cc = CC(Grafo)
-conectados = []
 
-for i in range(Grafo.V):
-    if cc.connected(vertice, i):
-        conectados.append(i)
+print("Numero de componentes conexas:", cc.count)
+print()
 
-print("Vertices conectados a %d: %s" % (vertice, conectados))
+print("Vertices conectados a componente 0:", vertice_conectado(Grafo, 0))
+print("Vertices conectados a componente 1:", vertice_conectado(Grafo, 4))
+
 
 print()
 # Questao 3
-bfs = BreadthFirstPaths(Grafo, vertice)
+bfs = BreadthFirstPaths(Grafo, 0)
 
-print(len(list(bfs.path_to(8)))-1)
+print("Distancia minima de (0,0) até (2,2): %d" % (len(list(bfs.path_to(8)))))
 
 print()
 # Questao 4
 cycle = Cycle(Grafo)
 if cycle.has_cycle:
-    print("Sim")
+    print("O grafo possui ciclo: Sim")
 else:    
-    print("Nao")
+    print("O grafo possui ciclo: Nao")
 
 print()
 # Questao 5
@@ -81,6 +88,6 @@ if ciclo:
         ciclo_final = (ciclo[idx:-1] + ciclo[:idx] + [0])[::-1]
         print("Ciclo a partir de 0:", ciclo_final)
     else:
-        print("Ciclo existe, mas não passa por 0:", ciclo)
+        print("Um ciclo encontrado:", ciclo)
 else:
     print("Nao existe ciclo")
