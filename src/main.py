@@ -4,7 +4,6 @@ from breadthfirstpaths import BreadthFirstPaths
 from cycle import Cycle
 
 def find_cycle_vertices(g):
-    """Encontra um ciclo no grafo usando DFS"""
     n = g.V
     marked = [False] * n
     parent = [-1] * n
@@ -20,7 +19,6 @@ def find_cycle_vertices(g):
                 if dfs(w, v):
                     return True
             elif w != p:
-                # Ciclo encontrado, reconstruir caminho
                 x = v
                 cycle.append(w)
                 while x != w:
