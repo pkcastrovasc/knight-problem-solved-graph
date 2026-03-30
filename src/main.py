@@ -34,6 +34,16 @@ def find_cycle_vertices(g):
             break
     return cycle
 
+def vertice_conectado(g, vertice):
+    cc = CC(g)
+    conectados = []
+    for i in range(g.V):
+        if cc.connected(vertice, i):
+            conectados.append(i)
+    return conectados
+
+
+# Questao 1
 with open("dados/entrada.txt") as f:
     V = int(f.readline())
     E = int(f.readline())
@@ -43,15 +53,6 @@ with open("dados/entrada.txt") as f:
         v, w = f.readline().split()
         Grafo.add_edge(v, w)
 
-def vertice_conectado(g, vertice):
-    cc = CC(g)
-    conectados = []
-    for i in range(g.V):
-        if cc.connected(vertice, i):
-            conectados.append(i)
-    return conectados
-
-# Questao 1
 print(Grafo)
 
 print()
