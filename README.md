@@ -32,7 +32,7 @@ O algoritmo utiliza a **BFS** para determinar quantos movimentos um cavalo de xa
    
 2. Clone o repositório
    ```text
-   git clone https://github.com/pkcastrovasc/t2-cavalo.git
+   git clone https://github.com/pkcastrovasc/knight-problem-solved-graph.git
    ```
    
 3. Execute o script principal:
